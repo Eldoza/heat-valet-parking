@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Material UI Starter`,
+    title: `Heat Inc. Valet Parking`,
     description: `Kick off your next, great Gatsby project with this Material UI starter. This barebones starter ships with the main Gatsby and Material UI configuration files you might need.`,
     author: `@dominicabela`,
+    icon: `src/images/gatsby-icon.png`,
   },
+  pathPrefix: '/heat-valet-parking',
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -21,10 +23,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#f44336`,
+        theme_color: `#f44336`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/heat_valet_logo.png`, // This path is relative to the root of the site.
       },
     },
     {

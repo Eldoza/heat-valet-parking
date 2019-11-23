@@ -20,7 +20,12 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import HomeIcon from '@material-ui/icons/Home'
+import InfoIcon from '@material-ui/icons/Info'
 import ListIcon from '@material-ui/icons/ViewList'
+import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount'
+import PanoramaIcon from '@material-ui/icons/Panorama'
+import RateReviewIcon from '@material-ui/icons/RateReview'
+import ContactMailIcon from '@material-ui/icons/ContactMail'
 
 const drawerWidth = 240
 
@@ -33,7 +38,7 @@ const useStyles = makeStyles(theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    background: 'linear-gradient(to right,  #663399, #5B72FF)',
+    background: '#f44336',
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -115,7 +120,11 @@ const Header = ({ siteTitle }) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" color="inherit">
+          <Typography
+            variant="h5"
+            color="inherit"
+            style={{ fontFamily: 'Lato' }}
+          >
             {siteTitle}
           </Typography>
         </Toolbar>
@@ -150,10 +159,42 @@ const Header = ({ siteTitle }) => {
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <ListIcon />
+              <InfoIcon />
             </ListItemIcon>
             <ListItemText>
-              <Link to="/components">Components</Link>
+              <Link to="/about">About</Link>
+            </ListItemText>
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <SupervisorAccountIcon />
+            </ListItemIcon>
+            <ListItemText>
+              <Link to="/services">Services</Link>
+            </ListItemText>
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <PanoramaIcon />
+            </ListItemIcon>
+            <ListItemText>
+              <Link to="/gallery">Gallery</Link>
+            </ListItemText>
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <RateReviewIcon />
+            </ListItemIcon>
+            <ListItemText>
+              <Link to="/reviews">Reviews</Link>
+            </ListItemText>
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <ContactMailIcon />
+            </ListItemIcon>
+            <ListItemText>
+              <Link to="/contact">Contact</Link>
             </ListItemText>
           </ListItem>
         </List>
